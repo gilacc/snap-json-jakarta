@@ -16,7 +16,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 package io.github.gilacc.snap.serialization.json.jakarta;
 
 import io.github.gilacc.snap.SimpleSnapshot;
@@ -35,8 +34,7 @@ public final class JakartaJsonDeserializer implements Deserializer<JsonObject> {
 
     @Override
     public Snapshot restore(final JsonObject source) {
-        return new SimpleSnapshot(this.restoreNodeMap(source)
-        );
+        return new SimpleSnapshot(this.restoreNodeMap(source));
     }
 
     private Map<String, Node> restoreNodeMap(final JsonObject object) {
