@@ -22,7 +22,11 @@ import io.github.gilacc.snap.node.Node;
 import io.github.gilacc.snap.serialization.Serializer;
 import jakarta.json.*;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -38,7 +42,11 @@ public final class JakartaJsonSerializer implements Serializer<JsonValue> {
 
     @Override
     public JsonValue serializeNumber(final Number number) {
-        return Json.createValue(number.doubleValue());
+        final String representation = new DecimalFormat(
+            "#.##################",
+            new DecimalFormatSymbols(Locale.ENGLISH)
+        ).format(number);
+        return Json.createValue(new BigDecimal(representation));
     }
 
     @Override
