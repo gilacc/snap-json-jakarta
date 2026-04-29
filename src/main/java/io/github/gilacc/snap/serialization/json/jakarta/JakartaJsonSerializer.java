@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.gilacc.snap.deserialization.json.jakarta;
+package io.github.gilacc.snap.serialization.json.jakarta;
 
 import io.github.gilacc.snap.node.Node;
 import io.github.gilacc.snap.serialization.Serializer;

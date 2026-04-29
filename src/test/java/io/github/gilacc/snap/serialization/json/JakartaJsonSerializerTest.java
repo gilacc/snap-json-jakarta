@@ -2,7 +2,7 @@ package io.github.gilacc.snap.serialization.json;
 
 import io.github.gilacc.snap.SimpleSnapshot;
 import io.github.gilacc.snap.Snapshot;
-import io.github.gilacc.snap.deserialization.json.jakarta.JakartaJsonSerializer;
+import io.github.gilacc.snap.serialization.json.jakarta.JakartaJsonSerializer;
 import io.github.gilacc.snap.node.*;
 import io.github.gilacc.snap.serialization.Serializer;
 import jakarta.json.Json;
